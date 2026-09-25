@@ -1,0 +1,135 @@
+2026-05-04 14:11:13,245 | INFO     | root                 | [ORCH] Logging → /home/jubayed/Downloads/aenida_v7_ui_updated/aenida_v6_complete_fixed/core/logs/aenida_20260504.log [console+file]
+2026-05-04 14:11:13,319 | INFO     | startup              | Config ✓
+2026-05-04 14:11:13,332 | WARNING  | root                 | [MEMORY] memvid not installed — pip install memvid. Falling back to in-memory only.
+2026-05-04 14:11:13,333 | INFO     | startup              | Memory ✓ (memvid=False)
+2026-05-04 14:11:18,787 | INFO     | startup              | Market data ✓ BTC=$78,703
+2026-05-04 14:11:18,810 | INFO     | startup              | AI APIs: ['groq', 'gemini', 'together_ai', 'local', 'offline']
+2026-05-04 14:11:18,844 | INFO     | startup              | Worker PC: OFFLINE (local brain active)
+2026-05-04 14:11:20,106 | WARNING  | wire                 | trading_agent ←→ memory_layer: 'TradingAgent' object attribute 'analyze_symbol' is read-only
+2026-05-04 14:11:20,731 | INFO     | wire                 | news_watcher ←→ trading_agent ✓
+2026-05-04 14:11:21,257 | WARNING  | wire                 | trade_journal ←→ performance_learner: 'TradeJournal' object attribute 'log_approval' is read-only
+2026-05-04 14:11:21,417 | INFO     | wire                 | update_engine ←→ module_forge ✓
+2026-05-04 14:11:21,468 | WARNING  | root                 | psutil not available - memory monitoring disabled
+2026-05-04 14:11:21,471 | INFO     | wire                 | memory_monitor ←→ services ✓
+2026-05-04 14:11:21,472 | INFO     | wire                 | Module wiring complete
+2026-05-04 14:11:21,473 | WARNING  | root                 | Cannot start memory monitor - psutil unavailable
+2026-05-04 14:11:21,473 | INFO     | services             | memory_monitor ✓
+2026-05-04 14:11:21,475 | INFO     | root                 | [NEWS] Polling every 30 min
+2026-05-04 14:11:21,478 | INFO     | agent_loop           | ─── Cycle #1 ───────────────────
+2026-05-04 14:11:21,478 | INFO     | agent_loop           | Agent loop started — symbols=['BTC-USDT', 'ETH-USDT', 'BNB-USDT'] interval=60s
+2026-05-04 14:11:21,478 | INFO     | services             | news_watcher ✓
+2026-05-04 14:11:21,515 | WARNING  | services             | usb_sentinel ✗ module 'usb_sentinel' has no attribute 'start'
+2026-05-04 14:11:22,264 | WARNING  | root                 | [NEWS] CryptoCompare fetch failed: slice(None, 20, None)
+2026-05-04 14:11:22,268 | INFO     | root                 | [NEWS] Cycle complete: 0 new, 0 alerts
+2026-05-04 14:11:24,386 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2907ms | worker=✗)
+2026-05-04 14:11:26,138 | ERROR    | root                 | OKX funding rate error: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))
+2026-05-04 14:11:26,142 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1756ms | worker=✗)
+2026-05-04 14:11:28,295 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2153ms | worker=✗)
+2026-05-04 14:11:29,438 | INFO     | task_queue           | [TQ] Background threads started
+2026-05-04 14:12:29,448 | INFO     | agent_loop           | ─── Cycle #2 ───────────────────
+2026-05-04 14:12:37,235 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (7783ms | worker=✗)
+2026-05-04 14:12:39,177 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1942ms | worker=✗)
+2026-05-04 14:12:41,804 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2626ms | worker=✗)
+2026-05-04 14:13:41,813 | INFO     | agent_loop           | ─── Cycle #3 ───────────────────
+2026-05-04 14:13:45,030 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3215ms | worker=✗)
+2026-05-04 14:13:47,510 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2480ms | worker=✗)
+2026-05-04 14:13:49,533 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2022ms | worker=✗)
+2026-05-04 14:14:49,545 | INFO     | agent_loop           | ─── Cycle #4 ───────────────────
+2026-05-04 14:14:57,219 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (7670ms | worker=✗)
+2026-05-04 14:14:59,573 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2354ms | worker=✗)
+2026-05-04 14:15:01,314 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (1741ms | worker=✗)
+2026-05-04 14:16:01,322 | INFO     | agent_loop           | ─── Cycle #5 ───────────────────
+2026-05-04 14:16:03,605 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2278ms | worker=✗)
+2026-05-04 14:16:06,173 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2568ms | worker=✗)
+2026-05-04 14:16:08,013 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (1839ms | worker=✗)
+2026-05-04 14:17:08,025 | INFO     | agent_loop           | ─── Cycle #6 ───────────────────
+2026-05-04 14:17:12,754 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (4725ms | worker=✗)
+2026-05-04 14:17:15,857 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (3103ms | worker=✗)
+2026-05-04 14:17:18,839 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2981ms | worker=✗)
+2026-05-04 14:18:18,847 | INFO     | agent_loop           | ─── Cycle #7 ───────────────────
+2026-05-04 14:18:22,153 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3304ms | worker=✗)
+2026-05-04 14:18:25,158 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (3004ms | worker=✗)
+2026-05-04 14:18:27,279 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2121ms | worker=✗)
+2026-05-04 14:19:27,290 | INFO     | agent_loop           | ─── Cycle #8 ───────────────────
+2026-05-04 14:19:31,462 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (4167ms | worker=✗)
+2026-05-04 14:19:33,324 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1862ms | worker=✗)
+2026-05-04 14:19:36,346 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (3022ms | worker=✗)
+2026-05-04 14:20:36,356 | INFO     | agent_loop           | ─── Cycle #9 ───────────────────
+2026-05-04 14:20:38,251 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (1892ms | worker=✗)
+2026-05-04 14:20:40,118 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1866ms | worker=✗)
+2026-05-04 14:20:44,249 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (4131ms | worker=✗)
+2026-05-04 14:21:44,259 | INFO     | agent_loop           | ─── Cycle #10 ───────────────────
+2026-05-04 14:21:47,473 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3210ms | worker=✗)
+2026-05-04 14:21:49,276 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1802ms | worker=✗)
+2026-05-04 14:21:51,830 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2554ms | worker=✗)
+2026-05-04 14:22:51,839 | INFO     | agent_loop           | ─── Cycle #11 ───────────────────
+2026-05-04 14:22:55,210 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3368ms | worker=✗)
+2026-05-04 14:23:03,492 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (8281ms | worker=✗)
+2026-05-04 14:23:07,114 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (3621ms | worker=✗)
+2026-05-04 14:24:07,124 | INFO     | agent_loop           | ─── Cycle #12 ───────────────────
+2026-05-04 14:24:10,270 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3141ms | worker=✗)
+2026-05-04 14:24:13,840 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (3569ms | worker=✗)
+2026-05-04 14:24:15,725 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (1884ms | worker=✗)
+2026-05-04 14:25:15,750 | INFO     | agent_loop           | ─── Cycle #13 ───────────────────
+2026-05-04 14:25:18,189 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2429ms | worker=✗)
+2026-05-04 14:25:20,512 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2323ms | worker=✗)
+2026-05-04 14:25:23,316 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2803ms | worker=✗)
+2026-05-04 14:26:23,325 | INFO     | agent_loop           | ─── Cycle #14 ───────────────────
+2026-05-04 14:26:25,446 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2116ms | worker=✗)
+2026-05-04 14:26:29,158 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (3711ms | worker=✗)
+2026-05-04 14:26:31,760 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2602ms | worker=✗)
+2026-05-04 14:27:31,773 | INFO     | agent_loop           | ─── Cycle #15 ───────────────────
+2026-05-04 14:27:34,991 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3215ms | worker=✗)
+2026-05-04 14:27:37,134 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2142ms | worker=✗)
+2026-05-04 14:27:39,124 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (1990ms | worker=✗)
+2026-05-04 14:28:39,133 | INFO     | agent_loop           | ─── Cycle #16 ───────────────────
+2026-05-04 14:28:41,947 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2811ms | worker=✗)
+2026-05-04 14:28:43,977 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2030ms | worker=✗)
+2026-05-04 14:28:45,743 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (1766ms | worker=✗)
+2026-05-04 14:29:45,753 | INFO     | agent_loop           | ─── Cycle #17 ───────────────────
+2026-05-04 14:29:47,792 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2035ms | worker=✗)
+2026-05-04 14:29:49,558 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1766ms | worker=✗)
+2026-05-04 14:29:52,404 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2845ms | worker=✗)
+2026-05-04 14:30:52,413 | INFO     | agent_loop           | ─── Cycle #18 ───────────────────
+2026-05-04 14:30:55,177 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2743ms | worker=✗)
+2026-05-04 14:31:07,213 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (12036ms | worker=✗)
+2026-05-04 14:31:10,493 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (3279ms | worker=✗)
+2026-05-04 14:32:10,502 | INFO     | agent_loop           | ─── Cycle #19 ───────────────────
+2026-05-04 14:32:12,759 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2253ms | worker=✗)
+2026-05-04 14:32:16,048 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (3289ms | worker=✗)
+2026-05-04 14:32:18,459 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2410ms | worker=✗)
+2026-05-04 14:33:18,468 | INFO     | agent_loop           | ─── Cycle #20 ───────────────────
+2026-05-04 14:33:21,015 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2544ms | worker=✗)
+2026-05-04 14:33:23,772 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2756ms | worker=✗)
+2026-05-04 14:33:27,511 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (3738ms | worker=✗)
+2026-05-04 14:34:27,529 | INFO     | agent_loop           | ─── Cycle #21 ───────────────────
+2026-05-04 14:34:49,689 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (22157ms | worker=✗)
+2026-05-04 14:34:58,813 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (9123ms | worker=✗)
+2026-05-04 14:35:09,800 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (10987ms | worker=✗)
+2026-05-04 14:36:09,809 | INFO     | agent_loop           | ─── Cycle #22 ───────────────────
+2026-05-04 14:36:12,209 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2388ms | worker=✗)
+2026-05-04 14:36:14,195 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1985ms | worker=✗)
+2026-05-04 14:36:19,560 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (5365ms | worker=✗)
+2026-05-04 14:37:19,569 | INFO     | agent_loop           | ─── Cycle #23 ───────────────────
+2026-05-04 14:37:21,367 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (1794ms | worker=✗)
+2026-05-04 14:37:23,797 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2430ms | worker=✗)
+2026-05-04 14:37:26,318 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2521ms | worker=✗)
+2026-05-04 14:38:26,333 | INFO     | agent_loop           | ─── Cycle #24 ───────────────────
+2026-05-04 14:38:29,545 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3210ms | worker=✗)
+2026-05-04 14:38:31,849 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2297ms | worker=✗)
+2026-05-04 14:38:33,885 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (2036ms | worker=✗)
+2026-05-04 14:39:33,894 | INFO     | agent_loop           | ─── Cycle #25 ───────────────────
+2026-05-04 14:39:36,537 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2624ms | worker=✗)
+2026-05-04 14:39:38,309 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1772ms | worker=✗)
+2026-05-04 14:39:40,254 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (1944ms | worker=✗)
+2026-05-04 14:40:40,262 | INFO     | agent_loop           | ─── Cycle #26 ───────────────────
+2026-05-04 14:40:42,622 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (2355ms | worker=✗)
+2026-05-04 14:40:45,499 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (2876ms | worker=✗)
+2026-05-04 14:40:47,448 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (1949ms | worker=✗)
+2026-05-04 14:41:23,578 | WARNING  | root                 | [NEWS] CryptoCompare fetch failed: slice(None, 20, None)
+2026-05-04 14:41:23,581 | INFO     | root                 | [NEWS] Cycle complete: 0 new, 0 alerts
+2026-05-04 14:41:47,456 | INFO     | agent_loop           | ─── Cycle #27 ───────────────────
+2026-05-04 14:41:51,452 | INFO     | pipeline             | [PIPELINE] BTC-USDT → HOLD (3992ms | worker=✗)
+2026-05-04 14:41:53,332 | INFO     | pipeline             | [PIPELINE] ETH-USDT → HOLD (1879ms | worker=✗)
+2026-05-04 14:41:56,535 | INFO     | pipeline             | [PIPELINE] BNB-USDT → HOLD (3203ms | worker=✗)
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       

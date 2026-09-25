@@ -1,0 +1,211 @@
+{
+  "api_keys": {
+    "groq": "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",
+    "gemini": "AIzaSyAH38y4ZIkM2kCm71BOjYizgKl5uTow72o",
+    "together_ai": "tgp_v1_ALci8X-kFNeoTkD68kHlUhc4LcLD2DEd7cUIgrqTnC0",
+    "cryptocompare": "52600c9e9738ceb4a91681c4d47af2e5d8981bc39a49196dcf5cf1ca7c571428",
+    "github": "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",
+    "worker_api_key": "",
+    "telegram_bot_token": "AAGCee4knskBPMtrNLomX7t 5H966rC7pDe4",
+    "telegram_chat_id": "8756156527"
+  },
+   "gemini_model": "AIzaSyAH38y4ZIkM2kCm71BOjYizgKl5uTow72o",
+  "worker": {
+    "url": "http://localhost:8000",
+    "grpc_port": 50051,
+    "timeout_seconds": 30,
+    "heartbeat_interval_seconds": 30,
+    "retry_interval_seconds": 60
+  },
+  "trading": {
+    "symbols": ["BTC-USDT", "ETH-USDT", "BNB-USDT"],
+    "capture_interval_seconds": 60,
+    "chart_crop": {"x": 0, "y": 0, "width": 1280, "height": 720},
+    "overlay_position": "top-right",
+    "overlay_opacity": 0.85,
+    "hotkey_refresh": "ctrl+shift+a",
+    "hotkey_approve": "y",
+    "hotkey_reject": "n",
+    "approval_timeout_seconds": 120,
+    "max_concurrent_positions": 3,
+    "risk_per_trade_percent": 2.0,
+    "default_stop_loss_percent": 3.0,
+    "default_take_profit_percent": 8.0,
+    "signal_strength_threshold": 70,
+    "min_signal_confidence": 0.65,
+    "price_history_max_rows": 10000,
+    "backtest_default_days": 30,
+    "taker_fee_percent": 0.05,
+    "slippage_percent": 0.03,
+    "real_data_weight": 0.70,
+    "vision_weight": 0.30
+  },
+  "market_data": {
+    "okx_rate_limit_per_second": 10,
+    "binance_rate_limit_per_second": 20,
+    "coingecko_rate_limit_per_second": 5,
+    "retry_wait_seconds": 2,
+    "ban_wait_seconds": 60,
+    "sync_history_days": 30
+  },
+  "news_watcher": {
+    "poll_interval_minutes": 30,
+    "max_cache_items": 100,
+    "alert_keywords": [
+      "hack", "crash", "ban", "SEC", "regulation",
+      "pump", "dump", "rug", "liquidation", "exploit",
+      "scam", "arrest", "shutdown", "war", "sanction"
+    ],
+    "coin_watchlist": ["BTC", "ETH", "BNB"]
+  },
+  "fallback_chain": ["groq", "gemini", "together_ai", "local", "offline"],
+  "memory": {
+    "warning_mb": 150,
+    "critical_mb": 200,
+    "check_interval_seconds": 60,
+    "backpressure_percent": 85
+  },
+  "cognition": {
+    "reflex_similarity_threshold": 0.72,
+    "threshold_min": 0.60,
+    "threshold_max": 0.90,
+    "threshold_tune_interval_days": 7,
+    "reflex_map_max_mb": 100,
+    "reflex_match_timeout_ms": 50,
+    "offload_context_max_bytes": 4096
+  },
+  "performance_learner": {
+    "db_max_mb": 100,
+    "decay_lambda": 0.1,
+    "decay_interval_hours": 24,
+    "relevance_prune_threshold": 0.1,
+    "wma_alpha": 0.3,
+    "fingerprint_match_threshold": 0.90,
+    "node_retire_days": 7,
+    "node_archive_days": 30,
+    "escore_local_baseline": 50,
+    "escore_remote_baseline": 800
+  },
+  "task_executor": {
+    "max_task_retries": 3,
+    "ghost_entry_size_kb": 1,
+    "reconciliation_gap_seconds": 30,
+    "sliding_window_size": 10
+  },
+  "security": {
+    "vault_path": "data/vault.enc",
+    "token_ttl_seconds": 30,
+    "nonce_retention_seconds": 60,
+    "l3_challenge_ttl_seconds": 120,
+    "frequency_window_minutes": 5,
+    "frequency_penalty_threshold": 3
+  },
+  "usb_token": {
+    "label": "AENIDA",
+    "device_path": "/dev/disk/by-label/AENIDA",
+    "identity_file": "identity.enc",
+    "check_interval_seconds": 30,
+    "installer_dir": "installer/",
+    "mother_portable_dir": "mother_portable/",
+    "recovery_dir": "recovery/",
+    "token_expiry_days": 365,
+    "backup_file": "usb_backup.enc"
+  },
+  "totp": {
+    "issuer": "AENIDA-SOVEREIGN",
+    "account_name": "AENIDA",
+    "valid_window": 1,
+    "qr_output": "SCAN_WITH_AEGIS.png",
+    "recommended_app": "Aegis Authenticator (getaegis.app)"
+  },
+  "knowledge": {
+    "max_gb": 5,
+    "hot_days": 90,
+    "export_max_tokens": 50000
+  },
+  "research": {
+    "max_duration_hours": 2,
+    "max_api_calls": 200,
+    "max_experiments": 10,
+    "watchdog_interval_minutes": 15
+  },
+  "alerts": {
+    "min_interval_seconds": 60,
+    "max_per_hour": 10
+  },
+  "worker_registry": {
+    "heartbeat_timeout_minutes": 5,
+    "retire_after_days": 7,
+    "archive_after_days": 30
+  },
+  "rtc_wake": {
+    "enabled": true,
+    "nightly_wake_time": "01:55",
+    "nightly_sleep_time": "04:00",
+    "morning_wake_time": "08:00",
+    "task_budget_hours": 2
+  },
+  "timesfm": {
+    "model": "google/timesfm-2.5-200m-pytorch",
+    "min_worker_ram_gb": 2,
+    "forecast_horizon": 12,
+    "context_length": 100
+  },
+  "module_forge": {
+    "max_temp_modules": 5,
+    "temp_expiry_hours": 24,
+    "temp_dir": "modules/temp/",
+    "permanent_dir": "modules/permanent/",
+    "banned_patterns": [
+      "os.system", "exec(", "eval(",
+      "__import__", "subprocess",
+      "open(\"/etc", "open(\"/sys", "open(\"/proc"
+    ]
+  },
+  "update_engine": {
+    "confidence_log_threshold": 0.60,
+    "confidence_suggest_threshold": 0.60,
+    "confidence_alert_threshold": 0.80,
+    "confidence_auto_temp_threshold": 0.95,
+    "check_interval_hours": 6,
+    "max_suggestions_per_run": 5
+  },
+  "tradingview": {
+    "mcp_host": "127.0.0.1",
+    "mcp_port": 3000,
+    "mcp_project_dir": "~/tradingview-mcp",
+    "auto_start_mcp": false,
+    "default_symbol": "BTCUSDT",
+    "default_interval": "1H",
+    "screenshot_dir": "data/tv_screenshots/"
+  },
+  "paths": {
+    "growth_db": "data/growth.db",
+    "news_cache_db": "data/news_cache.db",
+    "worker_log_db": "data/worker_log.db",
+    "audit_log_db": "data/audit_log.db",
+    "memory_log_db": "data/memory_log.db",
+    "performance_db": "data/performance.db",
+    "task_ledger_db": "data/task_ledger.db",
+    "task_queue_db": "data/task_queue.db",
+    "routing_log_db": "data/routing_log.db",
+    "price_history_db": "data/price_history.db",
+    "trade_journal_db": "data/trade_journal.db",
+    "worker_reg_db": "data/worker_registry.db",
+    "module_registry_db": "data/module_registry.db",
+    "suggestions_db": "data/suggestions.db",
+    "test_history_db": "data/test_history.db",
+    "usb_events_db": "data/usb_events.db",
+    "revocation_db": "data/revocation.db",
+    "memory_mv2": "data/AENIDA_memory.mv2",
+    "reflex_library": "data/reflex_library.json",
+    "watchlist": "data/watchlist.json",
+    "knowledge_dir": "knowledge/",
+    "skills_dir": "skills/",
+    "strategies_dir": "strategies/",
+    "modules_temp_dir": "modules/temp/",
+    "modules_perm_dir": "modules/permanent/",
+    "exports_dir": "exports/",
+    "updates_md": "knowledge/improvements/suggested.md"
+  }
+}
