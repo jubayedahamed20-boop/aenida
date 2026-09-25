@@ -1,0 +1,21 @@
+[Unit]
+Description=AENIDA Shadow Worker
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=jubayed
+WorkingDirectory=/home/jubayed/Downloads/aenida_v7_ui_updated/aenida_v6_complete_fixed/tools
+ExecStart=/usr/bin/python3 /home/jubayed/Downloads/aenida_v7_ui_updated/aenida_v6_complete_fixed/tools/shadow_worker.py
+Restart=always
+RestartSec=15
+StandardOutput=null
+StandardError=journal
+SyslogIdentifier=aenida
+Nice=10
+CPUWeight=50
+MemoryMax=512M
+
+[Install]
+WantedBy=multi-user.target
