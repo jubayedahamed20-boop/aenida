@@ -1,15 +1,15 @@
 {
   "api_keys": {
-    "groq": "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",
-    "gemini": "AIzaSyAH38y4ZIkM2kCm71BOjYizgKl5uTow72o",
-    "together_ai": "tgp_v1_ALci8X-kFNeoTkD68kHlUhc4LcLD2DEd7cUIgrqTnC0",
-    "cryptocompare": "52600c9e9738ceb4a91681c4d47af2e5d8981bc39a49196dcf5cf1ca7c571428",
-    "github": "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",
+    "groq": "",
+    "gemini": "",
+    "together_ai": "",
+    "cryptocompare": "",
+    "github": "",
     "worker_api_key": "",
-    "telegram_bot_token": "AAGCee4knskBPMtrNLomX7t 5H966rC7pDe4",
-    "telegram_chat_id": "8756156527"
+    "telegram_bot_token": "",
+    "telegram_chat_id": ""
   },
-   "gemini_model": "AIzaSyAH38y4ZIkM2kCm71BOjYizgKl5uTow72o",
+   "gemini_model": "",
   "worker": {
     "url": "http://localhost:8000",
     "grpc_port": 50051,
