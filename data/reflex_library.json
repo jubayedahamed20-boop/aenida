@@ -1,0 +1,116 @@
+{
+  "templates": [
+    {
+      "label": "analyze_chart",
+      "template_text": "analyze chart for {symbol}",
+      "action_id": "chart_analysis",
+      "priority": 1,
+      "local_handler": false
+    },
+    {
+      "label": "check_price",
+      "template_text": "check price of {symbol}",
+      "action_id": "price_check",
+      "priority": 1,
+      "local_handler": true
+    },
+    {
+      "label": "run_script",
+      "template_text": "run {script_name} script",
+      "action_id": "script_execution",
+      "priority": 3,
+      "local_handler": false
+    },
+    {
+      "label": "search_news",
+      "template_text": "search news for {query}",
+      "action_id": "news_search",
+      "priority": 2,
+      "local_handler": false
+    },
+    {
+      "label": "get_status",
+      "template_text": "get system status",
+      "action_id": "status_check",
+      "priority": 1,
+      "local_handler": true
+    },
+    {
+      "label": "queue_task",
+      "template_text": "queue {task_type} task",
+      "action_id": "task_queue",
+      "priority": 2,
+      "local_handler": true
+    },
+    {
+      "label": "basic_search",
+      "template_text": "search for {query}",
+      "action_id": "search",
+      "priority": 2,
+      "local_handler": false
+    },
+    {
+      "label": "code_review",
+      "template_text": "review code in {file_path}",
+      "action_id": "code_review",
+      "priority": 3,
+      "local_handler": false
+    },
+    {
+      "label": "write_report",
+      "template_text": "write report about {topic}",
+      "action_id": "report_generation",
+      "priority": 3,
+      "local_handler": false
+    },
+    {
+      "label": "summarize_text",
+      "template_text": "summarize {text_content}",
+      "action_id": "summarization",
+      "priority": 2,
+      "local_handler": false
+    },
+    {
+      "label": "check_worker",
+      "template_text": "check worker {worker_id} status",
+      "action_id": "worker_check",
+      "priority": 2,
+      "local_handler": true
+    },
+    {
+      "label": "forecast_price",
+      "template_text": "forecast price for {symbol}",
+      "action_id": "price_forecast",
+      "priority": 2,
+      "local_handler": false
+    },
+    {
+      "label": "run_backtest",
+      "template_text": "run backtest for {strategy}",
+      "action_id": "backtest",
+      "priority": 3,
+      "local_handler": false
+    },
+    {
+      "label": "get_signal",
+      "template_text": "get trading signal for {symbol}",
+      "action_id": "signal_generation",
+      "priority": 1,
+      "local_handler": true
+    },
+    {
+      "label": "check_module_status",
+      "template_text": "check module {module_name} status",
+      "action_id": "module_check",
+      "priority": 2,
+      "local_handler": true
+    },
+    {
+      "label": "suggest_update",
+      "template_text": "suggest system updates",
+      "action_id": "update_suggestion",
+      "priority": 3,
+      "local_handler": false
+    }
+  ]
+}
