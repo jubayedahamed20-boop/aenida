@@ -117,17 +117,17 @@ Default admin-panel password is **`123456`** — change it immediately (see [Sec
 
 ## ⚙️ Configuration
 
-Edit `core/config.json`:
+All settings live in `core/config.json`. The block below covers what you'll actually touch day-to-day; the full file has many more sections most users never need to edit.
+
+### Core settings (edit these)
 
 ```json
 {
   "api_keys": {
-    "groq": "",
-    "gemini": "",
-    "together_ai": "",
-    "worker_api_key": ""
+    "groq": "", "gemini": "", "together_ai": "", "cryptocompare": "",
+    "github": "", "worker_api_key": "", "telegram_bot_token": "", "telegram_chat_id": ""
   },
-  "worker": { "url": "http://localhost:8000" },
+  "worker": { "url": "http://localhost:8000", "grpc_port": 50051 },
   "trading": {
     "symbols": ["BTC-USDT", "ETH-USDT", "BNB-USDT"],
     "risk_per_trade_percent": 2.0,
@@ -137,11 +137,38 @@ Edit `core/config.json`:
 ```
 
 > ⚠️ `worker_api_key` must be **identical** on the Mother and every Worker, or the bridge fails with `checksum_mismatch`.
+> ⚠️ Never commit this file with real keys filled in — use `.env` / secret storage, and keep `core/config.json` out of version control once it holds live credentials.
 
 **Graceful degradation** — the system runs with none of this filled in:
 - No AI keys → falls back to a local rule-based brain
 - No `fastapi` → falls back to Python's built-in HTTP server
 - No `memvid` → falls back to in-memory-only (no persistence across restarts)
+
+### Advanced sections (defaults are fine for most setups)
+
+| Section | Controls |
+|---|---|
+| `market_data` | Per-exchange rate limits (OKX/Binance/CoinGecko) and retry/ban backoff timing |
+| `news_watcher` | Poll interval, alert keywords, coin watchlist for the news-monitoring module |
+| `memory` | Memory-usage warning/critical thresholds and check interval |
+| `cognition` | Reflex-cache similarity thresholds and reflex map size/timeout limits |
+| `performance_learner` | Decay rates, fingerprint matching, and worker-node retire/archive windows |
+| `task_executor` | Task retry count, ghost-entry size, reconciliation timing |
+| `security` | Vault path, TOTP token TTL, L3 challenge TTL, rate-limit thresholds for the L1/L2/L3 auth gate |
+| `usb_token` | USB hardware-token device path, label, and expiry for L3 auth |
+| `totp` | TOTP issuer/account name shown in authenticator apps |
+| `knowledge` | Knowledge-base size cap and export token limits |
+| `research` | Bounds on autonomous research runs (duration, API calls, experiment count) |
+| `alerts` | Rate limiting for outgoing alerts |
+| `worker_registry` | Heartbeat timeout and retire/archive windows for Worker PCs |
+| `rtc_wake` | Scheduled nightly wake/sleep and morning wake times (RTC-based) |
+| `timesfm` | Forecasting model name, minimum Worker RAM, forecast horizon |
+| `module_forge` | Auto-generated module limits and banned code patterns (`os.system`, `eval(`, etc.) for safety |
+| `update_engine` | Confidence thresholds that gate logging vs. suggesting vs. auto-applying code updates |
+| `tradingview` | MCP host/port, default symbol/interval, screenshot directory |
+| `paths` | File paths for every SQLite DB and data directory (auto-created; rarely needs editing) |
+
+Full field-by-field docs don't exist yet for the advanced sections — if you need to tune one, the clearest reference is grep'ing the key name in `core/` or `trading/` to see how it's read.
 
 ---
 
